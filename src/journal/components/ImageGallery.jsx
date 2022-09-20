@@ -1,14 +1,14 @@
 import { ImageList, ImageListItem } from '@mui/material';
 
-export const ImageGallery = () => {
+export const ImageGallery = ({ images }) => {
   return (
     <ImageList sx={{ width: '100%', height: 200 }} cols={4} rowHeight={200}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
+      {images.map((image) => (
+        <ImageListItem key={image}>
           <img
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
+            src={`${image}?w=164&h=164&fit=crop&auto=format`}
+            srcSet={`${image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            alt="Imagen de la nota"
             loading="lazy"
           />
         </ImageListItem>
@@ -17,7 +17,7 @@ export const ImageGallery = () => {
   );
 };
 
-const itemData = [
+/*const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
     title: 'Breakfast',
@@ -66,4 +66,4 @@ const itemData = [
     img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
     title: 'Bike',
   },
-];
+];*/
